@@ -1,0 +1,116 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  summary {
+    padding: 10px;
+    padding-left: 0px;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  /* Header styling */
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #24292e;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  #header h1 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  #ws-warning {
+    font-size: 1.1em;
+    margin-left: 20px;
+    color: #d13838;
+  }
+  
+  #github-link {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Main container holds left and right panels */
+  #main-container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust height to account for header */
+  }
+  
+  /* Left settings panel */
+  #left-panel {
+    width: 300px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  /* Right message display panel */
+  #right-panel {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 300px); /* Adjust according to the left panel's width */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+  
+  /* Message display area styling */
+  #messageDisplay {
+    flex: 1;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-family: monospace;
+  }
+  
+  /* Input and button styles */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .checkbox-group {
+    margin-bottom: 10px;
+  }
+  
+  /* GitHub icon hover effect */
+  #github-link svg {
+    fill: #fff;
+    transition: fill 0.2s;
+  }
+  
+  #github-link:hover svg {
+    fill: #c9d1d9;
+  }
+  

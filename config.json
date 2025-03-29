@@ -1,0 +1,14 @@
+{
+    "brokerAddress": "broker.emqx.io",
+    "port": "8083",
+    "path": "mqtt",
+    "secure": false,
+    "username": "",
+    "password": "",
+    "modes": {
+      "print": true,
+      "timer": false,
+      "abbreviate": false
+    }
+  }
+  
