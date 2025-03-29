@@ -1,6 +1,6 @@
 # MQTT Debugger Web
 
-## A live demo can be found [here](mqtt.soffer.tech)
+## A live demo can be found [here](http://mqtt.soffer.tech)
 ![image](https://github.com/user-attachments/assets/8c37beff-11b2-49b3-a479-d6d20c884484)
 
 ## If you found [this repository](https://github.com/TzurSoffer/FreecadDiscordPresence) useful, please give it a ⭐!.
