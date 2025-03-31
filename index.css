@@ -1,116 +1,198 @@
+/* Define Theme Variables */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #24292e;
+  --panel-bg: #f5f5f5;
+  --message-bg: #eee;
+  --border-color: #ccc;
+  --button-bg: #238636;
+  --button-hover-bg: #2ea043;
+  --link-color: #000000;
+}
+
+.dark-theme {
+  --background-color: #3b3b3b;
+  --text-color: #c9d1d9;
+  --header-bg: #161b22;
+  --panel-bg: #3b3b3b;
+  --message-bg: #2d2d2d;
+  --border-color: #30363d;
+  --button-bg: #238636;
+  --button-hover-bg: #2ea043;
+  --link-color: #58a6ff;
+}
+
 /* Global Styles */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-  }
-
-  summary {
-    padding: 10px;
-    padding-left: 0px;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-  }
-
-  /* Header styling */
-  #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #24292e;
-    color: #fff;
-    padding: 10px 20px;
-  }
-  
-  #header h1 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  #ws-warning {
-    font-size: 1.1em;
-    margin-left: 20px;
-    color: #d13838;
-  }
-  
-  #github-link {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  /* Main container holds left and right panels */
-  #main-container {
-    display: flex;
-    height: calc(100vh - 60px); /* Adjust height to account for header */
-  }
-  
-  /* Left settings panel */
-  #left-panel {
-    width: 300px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    box-sizing: border-box;
-    overflow-y: auto;
-  }
-  
-  /* Right message display panel */
-  #right-panel {
-    flex: 1;
-    padding: 10px;
-    background-color: #fff;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    max-width: calc(100% - 300px); /* Adjust according to the left panel's width */
-    overflow: hidden; /* Ensure content doesn't overflow */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
-  
-  /* Message display area styling */
-  #messageDisplay {
-    flex: 1;
-    padding: 10px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    overflow-y: auto;
-    white-space: pre-wrap;
-    font-family: monospace;
-  }
-  
-  /* Input and button styles */
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .checkbox-group {
-    margin-bottom: 10px;
-  }
-  
-  /* GitHub icon hover effect */
-  #github-link svg {
-    fill: #fff;
-    transition: fill 0.2s;
-  }
-  
-  #github-link:hover svg {
-    fill: #c9d1d9;
-  }
-  
+
+summary {
+  padding: 10px;
+  padding-left: 0px;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Header styling */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+#ws-warning {
+  font-size: 1.1em;
+  margin-left: 20px;
+  color: #d13838;
+}
+
+#github-link {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+#toggle-theme {
+  background-color: var(--button-bg);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s;
+}
+
+#toggle-theme:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Main container holds left and right panels */
+#main-container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* Left settings panel */
+#left-panel {
+  width: 300px;
+  padding: 10px;
+  background-color: var(--panel-bg);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Right message display panel */
+#right-panel {
+  flex: 1;
+  padding: 10px;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 300px);
+  overflow: hidden;
+}
+
+/* Message display area styling */
+#messageDisplay {
+  flex: 1;
+  padding: 10px;
+  background-color: var(--message-bg);
+  border: 1px solid var(--border-color);
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: monospace;
+  color: var(--text-color);
+}
+
+/* Input and button styles */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: var(--message-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: #fff;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.checkbox-group {
+  margin-bottom: 10px;
+}
+
+/* Header styling */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg, #24292e);
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* Left group */
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right group */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Theme Toggle Button styling */
+#toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+#toggle-theme:hover {
+  background-color: transparent;
+}
+
