@@ -3,7 +3,7 @@
 ## A live demo can be found [here](http://mqtt.soffer.tech)
 ![image](https://github.com/user-attachments/assets/8c37beff-11b2-49b3-a479-d6d20c884484)
 
-## If you found [this repository](https://github.com/TzurSoffer/FreecadDiscordPresence) useful, please give it a ⭐!.
+## If you found [this repository](https://github.com/TzurSoffer/mqtt-debugger-js) useful, please give it a ⭐!.
 
 This project is a web-based MQTT debugger that lets you connect to an MQTT broker using WebSockets, subscribe to topics, and publish messages. It also supports several modes (Print, Timer, and Abbreviate) for processing received messages.
 
